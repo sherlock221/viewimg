@@ -53,7 +53,7 @@
 		<div class="pad-content">
 			<div class="info">
 				<h1 class="info-title">快速上手</h1>
-				<p class="info-detail">导入 jquery1.9.js 和 viewimg.js</p>
+				<p class="info-detail">import jquery1.9.js 和 viewimg.js</p>
 				<div class="hight-code">
 					<pre>
 						<code>&lt;script type="text/javascript" src="js/jquery-1.9.1.min.js" &gt;&lt;/script&gt;</code>
