@@ -115,9 +115,7 @@ pre code{
     text-align: center;
     width: 100%;
 }
-.download:hover{
-	background:#333333;
-}
+
 .try{
 	background: #F0F0F0;
 	border: 3px dashed #D7D7D7;
