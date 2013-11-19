@@ -38,7 +38,7 @@
 	<header class="width-960 center">
 		<div class="pad-content center">
 			<h1 class="logo"></h1>
-			<p class="logo-desc">viewimg 是一个本地预览图片的jquery插件,不需要服务器端支持 它支持IE6+ Firefox
+			<p class="logo-desc">viewimg 是一个本地预览图片的jquery插件,不需要服务器端支持. 它支持IE6+ Firefox
 				chrome 360安全|360急速 等现代浏览器</p>
 
 			<ul class="share center">
