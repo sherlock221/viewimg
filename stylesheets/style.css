@@ -1,0 +1,247 @@
+/******************************
+ ******************************
+ *********首页样式表***********
+ ******************************
+ ******************************/
+html {
+	background: #F6F6F6;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	font-family: "微软雅黑";
+}
+
+h1,h2,h3 {
+	margin: 0;
+	padding: 0;
+}
+
+ul,li,p,pre {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+pre{
+	line-height: 20px;
+}
+pre code{
+	padding: 25px 0  !important;
+}
+
+.width-960 {
+	width: 960px;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.display-inline-block {
+	display: inline-block;
+	zoom: 1;
+	vertical-align: middle;
+	*display: inline;
+}
+
+.logo {
+	background: url("../img/logo.gif");
+	border: medium none !important;
+	height: 267px;
+	margin: 0 auto;
+	padding-top: 0;
+	width: 247px;
+}
+
+.logo-desc {
+	background: none repeat scroll 0 0 #000000;
+	color: #FFFFFF;
+	font-size: 30px;
+	margin: 40px auto;
+	padding: 40px 100px;
+	width: 600px;
+}
+
+.pad-content {
+	padding: 0 80px;
+}
+
+.share{
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	
+}
+.share li{
+	margin-bottom: 40px;
+}
+.share .browser-all {
+}
+.browser-all {
+	background-image: url("../img/browser-icon.png");
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+}
+
+.ie8 {
+	background-position: 0 0;
+}
+
+.firefox {
+	background-position: -80px 0;
+}
+
+.chrome {
+	background-position: -320px 0;
+}
+
+.safe-360 {
+	background-position: -160px 0;
+}
+
+.speed-360 {
+	background-position: -240px 0;
+}
+
+.download {
+	background: #000000;
+	border: 0 none;
+	cursor: pointer;
+	padding: 20px 100px;
+	color: white;
+	font-size: 200%;
+	width: 100%;
+}
+
+.try{
+	background: #F0F0F0;
+	border: 3px dashed #D7D7D7;
+	height: 500px;
+	margin-bottom: 40px;
+	cursor: pointer;
+	position: relative;
+	width: 800px;
+}
+
+.try:hover{
+	background: #C9C3C3;
+}
+.try-title{
+	margin: 20px 0;
+}
+
+
+.btnBase{
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+.uploadBtn{
+	background: none;
+	font-size: 270%;
+	position: absolute;
+	top: 45%;
+	left: 35%;
+	
+}
+header,#content {
+	
+}
+
+header {
+	
+}
+
+footer {
+	padding: 50px 0;
+}
+
+#footer-wrap {
+	width: 100%;
+	background: #000000;
+	color: white;
+}
+
+
+.info-title{
+	margin-bottom: 30px;
+}
+.info-detail{
+	margin-bottom: 10px;
+	color: #120E0E;
+}
+.hight-code{
+
+}
+.tips{
+	background: #000000;
+	color: white;
+	font-size: 100%;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+#content {
+	
+}
+.autor{
+	font-size: 120%;
+	vertical-align: top;
+	width: 400px;
+}
+.feedback{
+	width: 395px;
+}
+.feedback h1{
+	font-size: 200%;
+	margin-bottom: 20px;
+}
+
+.feedback textarea{
+	   height: 150px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    
+}
+.feedback  .sendMe{
+	width: 100%;
+	height: 50px;
+	background: #AA1B1B;
+	cursor: pointer;
+	color: white;
+	font-weight: bold;
+	font-size: 160%;
+}
+.fileBtn{
+	position: relative;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+	background: none;
+	filter:alpha(opacity=0);
+    opacity:0;
+    cursor: pointer;
+}
+#localImag {
+	width: 800px;
+	height: 500px;
+	*overflow: hidden; /** IE6 必须 **/
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.code-img{
+    width: 140px;
+    height: 140px;
+    background-image: url("../img/20120113103021-320064891.png");
+    display: block;
+    margin-top: 10px;
+}
+.dashedLine{
+    border-bottom: 3px dashed #d7d7d7;
+    margin-bottom: 30px;
+}

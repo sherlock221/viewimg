@@ -12,14 +12,14 @@
 <!-- cdn jquery -->
 <script type="text/javascript" src="javascripts/jquery-1.9.1.min.js"></script>
 <!-- html5 js -->
-<script type="text/javascript" src="javascripts/html5.js"></script>
+<script type="text/javascript" src="/viewimg/js/html5.js"></script>
 
 <!-- 语法高亮 -->
-<script type="text/javascript" src="javascripts/highlight.pack.js"></script>
+<script type="text/javascript" src="/viewimg/js/highlight.pack.js"></script>
 <!-- 本地预览 js -->
-<script type="text/javascript" src="javascripts/viewimg.js"></script>
+<script type="text/javascript" src="/viewimg/js/viewimg.js"></script>
 <!-- 首页 js -->
-<script type="text/javascript" src="javascripts/index.js"></script>
+<script type="text/javascript" src="/viewimg/js/index.js"></script>
 
 </head>
 
