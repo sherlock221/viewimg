@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片预上传demo</title>
+
+<!-- cdn jquery -->
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
+<!-- 本地预览 js -->
+<script type="text/javascript" src="js/viewimg.js"></script>
+
+    <style type="text/css">
+
+        #localImag {
+            width: 200px;
+            height: 200px;
+            background : #5F748A;
+            *overflow: hidden;  /** IE6 必须 **/
+        }
+
+    </style>
+</head>
+
+<body>
+<input type="file" id="myfile" />
+<div id="localImag"></div>
+</body>
+
+
+
+
+
+</html>
+
+        <script type="text/javascript">
+
+            $(function() {
+                var file = $("#myfile");
+                file.viewimg({
+                    targetDiv : $("#localImag"),		//图片显示的容器
+                    sizingMethod : "scale",			//按照图片比例自适应容器
+                    errorDiv : $("#error")			//错误显示位置
+                });
+            });
+
+        </script>
+
+
+
+
+
