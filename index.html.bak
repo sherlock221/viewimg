@@ -18,7 +18,7 @@
 <!-- 首页 css -->
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
 
-<link rel="stylesheet" type="text/css" href="stylesheets/hightcode/default.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/jquery.snippet.min.css" />
 
 <!-- cdn jquery -->
 <script type="text/javascript" src="javascripts/jquery-1.9.1.min.js"></script>
@@ -39,7 +39,7 @@
 		<div class="pad-content center">
 			<h1 class="logo"></h1>
 			<p class="logo-desc">viewimg 是一个本地预览图片的jquery插件,不需要服务器端支持 它支持IE6+ Firefox
-				chrome 360安全|360急速 等现代浏览器</p>
+				chrome safari 等现代浏览器</p>
 
 			<ul class="share center">
 				<li><span class="display-inline-block browser-all ie8"></span>
@@ -47,7 +47,7 @@
 					class="display-inline-block browser-all chrome"></span> <span
 					class="display-inline-block browser-all safe-360"></span> <span
 					class="display-inline-block browser-all speed-360"></span></li>
-				<li><a  href="/sherlock221/viewimg/archive/master.zip"  target="_blank" class="download">快点下载吧</a>
+				<li><a  href="https://github.com/sherlock221/viewimg/archive/master.zip"  target="_blank" class="download">快点下载吧</a>
 				</li>
 			</ul>
 

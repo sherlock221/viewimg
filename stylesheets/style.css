@@ -22,10 +22,8 @@ ul,li,p,pre {
 	list-style: none;
 }
 pre{
-	line-height: 20px;
 }
 pre code{
-	padding: 25px 0  !important;
 }
 
 .width-960 {
@@ -173,7 +171,7 @@ footer {
 	margin-bottom: 30px;
 }
 .info-detail{
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 	color: #120E0E;
 }
 .hight-code{
@@ -184,7 +182,7 @@ footer {
 	color: white;
 	font-size: 100%;
 	padding: 20px;
-	margin-bottom: 20px;
+	margin : 30px 0;
 }
 
 #content {

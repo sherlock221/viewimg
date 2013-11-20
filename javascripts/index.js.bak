@@ -1,19 +1,20 @@
 $(document).ready(function() {
 	
 
-$("pre.htmlCode").snippet("html",{style:"whitengrey"});
+$("pre.htmlCode").snippet("html");
     // Finds <pre> elements with the class "htmlCode"
     // and snippet highlights the HTML code within.
-$("pre.styles").snippet("css",{style:"whitengrey"});
+$("pre.styles").snippet("css",{style:"greenlcd"});
     // Finds <pre> elements with the class "styles"
     // and snippet highlights the CSS code within
     // using the "greenlcd" styling.
-$("pre.js").snippet("javascript",{style:"rand01"});
+$("pre.js").snippet("javascript",{style:"random",transparent:true,showNum:false});
     // Finds <pre> elements with the class "js"
     // and snippet highlights the JAVASCRIPT code within
     // using a random style from the selection of 39
     // with a transparent background
-
+    // without showing line numbers.
+- See more at: http://steamdev.com/snippet/#sthash.b36c4Nv6.dpuf
 
 
 	var file = $("#myfile");

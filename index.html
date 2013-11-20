@@ -18,7 +18,7 @@
 <!-- 首页 css -->
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
 
-<link rel="stylesheet" type="text/css" href="stylesheets/hightcode/default.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/jquery.snippet.min.css" />
 
 <!-- cdn jquery -->
 <script type="text/javascript" src="javascripts/jquery-1.9.1.min.js"></script>
@@ -26,7 +26,7 @@
 <script type="text/javascript" src="javascripts/html5.js"></script>
 
 <!-- 语法高亮 -->
-<script type="text/javascript" src="javascripts/highlight.pack.js"></script>
+<script type="text/javascript" src="javascripts/jquery.snippet.min.zh-cn.js"></script>
 <!-- 本地预览 js -->
 <script type="text/javascript" src="javascripts/viewimg.js"></script>
 <!-- 首页 js -->
@@ -39,7 +39,7 @@
 		<div class="pad-content center">
 			<h1 class="logo"></h1>
 			<p class="logo-desc">viewimg 是一个本地预览图片的jquery插件,不需要服务器端支持 它支持IE6+ Firefox
-				chrome 360安全|360急速 等现代浏览器</p>
+				chrome safari 等现代浏览器</p>
 
 			<ul class="share center">
 				<li><span class="display-inline-block browser-all ie8"></span>
@@ -66,49 +66,34 @@
 				<h1 class="info-title">快速上手</h1>
 				<p class="info-detail">import jquery1.9.js 和 viewimg.js</p>
 				<div class="hight-code">
-					<pre>
-						<code>&lt;script type="text/javascript" src="js/jquery-1.9.1.min.js" &gt;&lt;/script&gt;</code>
-						<code>&lt;script type="text/javascript" src="js/viewimg.js" &gt;&lt;/script&gt; </code>
-					</pre>
+					<pre class="htmlCode"> &lt;script type="text/javascript" src="js/jquery-1.9.1.min.js" &gt;&lt;/script&gt;<br/> &lt;script type="text/javascript" src="js/viewimg.js" &gt;&lt;/script&gt; </pre>
 				</div>
                  <div class="dashedLine"></div>
 				<p class="info-detail">创建一个文件上传控件 一个显示图片的容器</p>
 				<div class="hight-code">
-					<pre>
-						<code>&lt;input type="file" id="myfile" /&gt;</code>
-						<code>&lt;div id="localImag"&gt;&lt;/div&gt;</code>
-					</pre>
+					<pre class="htmlCode">&lt;input type="file" id="myfile" /&gt;<br/>&lt;div id="localImag"&gt;&lt;/div&gt;</pre>
 				</div>
                 <div class="dashedLine"></div>
 				<p class="info-detail">设置容器css样式</p>
 				<div class="hight-code">
-					<pre>
-						<code>#localImag {
+					<pre class="styles">#localImag {
 	width: 200px;
 	height: 200px;
 	background : #5F748A;
 	*overflow: hidden;  /** IE6 必须 **/
-}
-						</code>
-					</pre>
-				</div>
+}</pre></div>
 
                 <div class="dashedLine"></div>
 				<p class="info-detail">设置显示图片的参数</p>
 				<div class="hight-code">
-					<pre>
-						<code>$(function() {
+					<pre class="js">$(function() {
 		var file = $("#myfile");
 		file.viewimg({
 			targetDiv : $("#localImag"),		//图片显示的容器
 			sizingMethod : "scale",			//按照图片比例自适应容器
 			errorDiv : $("#error")			//错误显示位置
 		});
-	});		
-						</code>
-					</pre>
-				</div>
-				
+	});</pre></div>
 				<p class="tips">sizingMethod : scale|img<br>scale : 按照图片比例适应外层容器的宽高 <br>img :  显示图片原尺寸 </p>
 				
 			</div>
