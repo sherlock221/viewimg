@@ -55,7 +55,7 @@
 			 * 检测浏览器支持情况
 			 * 
 			 * @param path
-			 * @returns
+			 * @returns fn
 			 */
 			ckSupport : function(path) {
 				var supportRes = publicFn.suportHTML5();
@@ -73,7 +73,7 @@
 			 * 
 			 * @param allowTypes
 			 * @param imgSrc
-			 * @returns
+			 * @returns null
 			 */
 			ckImg : function(allowTypes, imgSrc) {
 				var i = 0;
