@@ -9,9 +9,13 @@ $("pre.js").snippet("javascript",{style:"rand01"});
 
 	file.viewimg({
 		targetDiv : $("#my_img"),
-		sizingMethod : "scale",
-		errorDiv : $("#error")
+		sizingMethod : "scale"
 	});
+
+    $("#try").click(function(){
+        file[0].click();
+    });
+
 
 	$("#sendMe").click(function(){
 		
