@@ -13,7 +13,7 @@
 		BASE : "base",
 		IMG_ERROR : "图片不合法",
 		IMG_SUCCESS : "图片通过"
-	}
+	};
 
 	$.fn.viewimg = function() {
 
@@ -32,18 +32,14 @@
 				// 绑定事件
 				$this.bind("change", function(e) {
 
+                    var options = $.fn.viewimg.options;
 					// 清空对象
-					$.fn.viewimg.options.targetDiv.html("");
+                    options.targetDiv.html("");
 
 					var isImg = privateFn.ckImg($.fn.viewimg.options.allowTypes,
 							_this.value);
 					if (isImg == CONSTANT.IMG_ERROR) {
-						if ($.fn.viewimg.options.errorDiv)
-							$.fn.viewimg.options.errorDiv
-									.html(CONSTANT.IMG_ERROR);
-						else
-							alert(CONSTANT.IMG_ERROR);
-
+                           privateFn.errorControl(options,CONSTANT.IMG_ERROR);
 					} else if (isImg == CONSTANT.IMG_SUCCESS) {
 						var fn = privateFn.ckSupport();
 						fn(_this);
@@ -51,11 +47,12 @@
 				});
 			},
 
+
 			/**
 			 * 检测浏览器支持情况
 			 * 
 			 * @param path
-			 * @returns
+			 * @returns fn
 			 */
 			ckSupport : function(path) {
 				var supportRes = publicFn.suportHTML5();
@@ -73,7 +70,7 @@
 			 * 
 			 * @param allowTypes
 			 * @param imgSrc
-			 * @returns
+			 * @returns null
 			 */
 			ckImg : function(allowTypes, imgSrc) {
 				var i = 0;
@@ -87,6 +84,22 @@
 				}
 				return CONSTANT.IMG_ERROR;
 			},
+
+            errorControl : function(options,message){
+                //传统打印
+                if(!options.error){
+                    alert(message);
+                }
+                //回调函数
+                else if (typeof (options.error) == "function"){
+                    $.fn.viewimg.options.error(message);
+                }
+                //输出指定dom
+                else{
+                    options.error.html(message);
+
+                }
+            },
 
 			/**
 			 * HTML5 FileAPI 读取显示
@@ -146,7 +159,6 @@
 
 			/**
 			 * 加载图片
-			 * 
 			 * @param $imgAuto
 			 * @param browserType
 			 */
@@ -159,7 +171,7 @@
 				} else if (browserType == CONSTANT.FILTER) {
 					var $container = options.targetDiv;
 					// 获得图片原始尺寸
-					$container.append($("<img id='viewimg_size'/>"));
+					$container.append('<img id="viewimg_size"/>');
 					var $imgAuto = $("#viewimg_size");
 					var imgAuto = $imgAuto[0];
 					imgAuto.style.display = "none";
@@ -170,8 +182,8 @@
 					setTimeout(function() {
 						var width = $imgAuto.width();
 						var height = $imgAuto.height();
-						// console.log(width);
-						// console.log(height);
+						 console.log(width);
+						 console.log(height);
 						privateFn.imgZoom($imgAuto, CONSTANT.FILTER, img);
 					}, options.ie_delay);
 
@@ -183,7 +195,6 @@
 
 			/**
 			 * 图片显示方式
-			 * 
 			 * @param img
 			 * @param browserType
 			 * @param src
@@ -334,15 +345,15 @@
 	};
 	// 暴露默认设置
 	$.fn.viewimg.options = {
-		errorDiv : "",
+		error : "",
 		targetDiv : "", // 显示预览图片的位置
 		allowTypes : [ ".jpg", ".png", ".bmp", ".gif", ".jpeg" ], // 允许上传图片类型
-		sizingMethod : "img", // 图片展示方式
+		sizingMethod : "scale", // 图片展示方式
 		// img 显示图片原始尺寸
 		// stretch 拉伸适应容器
 		// scale 比例适应外层容器
 		ie_delay : 2000
 	// 针对IE 78 的问题 图片过大的 需要延迟执行
-	}
+	};
 
 })(jQuery);

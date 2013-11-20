@@ -8,7 +8,7 @@
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 
 <!-- 本地预览 js -->
-<script type="text/javascript" src="js/viewimg.1.0.min.js"></script>
+<script type="text/javascript" src="js/viewimg.js"></script>
 
     <style type="text/css">
 
