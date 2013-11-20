@@ -37,18 +37,20 @@
 	<header class="width-960 center">
 		<div class="pad-content center">
 			<h1 class="logo"></h1>
-			<p class="logo-desc">viewimg 是一个本地预览图片的jquery插件,不需要服务器端支持 它支持IE6+ Firefox
-				chrome safari 等现代浏览器</p>
+			<div class="logo-desc">viewimg 是一个本地预览图片的jquery插件,不需要服务器端支持 它支持IE6+ Firefox
+				chrome safari 等现代浏览器
+                <ul class="share center">
+                    <li><a class="display-inline-block browser-all ie8"></a><h3>ie6+</h3> </li>
+                    <li>    <a class="display-inline-block browser-all firefox"></a><h3>火狐浏览器</h3> </li>
+                    <li>   <a class="display-inline-block browser-all chrome"></a><h3>谷歌浏览器</h3> </li>
+                    <li>    <a class="display-inline-block browser-all safari"></a><h3>苹果浏览器</h3> </li>
+                    <li>   <a class="display-inline-block browser-all speed-360"></a><h3>360极速</h3> </li>
+                    <li style=" margin-left: 15px;margin-top: 35px;">   <h3>supported by</h3> <a class="display-inline-block jquery"></a> </li>
+                </ul>
 
-			<ul class="share center">
-				<li><span class="display-inline-block browser-all ie8"></span>
-					<span class="display-inline-block browser-all firefox"></span> <span
-					class="display-inline-block browser-all chrome"></span> <span
-					class="display-inline-block browser-all safe-360"></span> <span
-					class="display-inline-block browser-all speed-360"></span></li>
-				<li><a  href="https://github.com/sherlock221/viewimg/archive/master.zip"  target="_blank" class="download">快点下载吧</a>
-				</li>
-			</ul>
+            </div>
+
+
 
 			<h1 class="try-title">试一试</h1>
 			<div class="try" id="try">
@@ -56,7 +58,7 @@
                 <input type="file" class="fileBtn" id="myfile" />
                 <div id="my_img"></div>
 			</div>
-
+            <a  href="https://github.com/sherlock221/viewimg/archive/master.zip"  target="_blank" class="download">快点下载吧</a>
 		</div>
 	</header>
 	<section id="content" class="width-960 center">
@@ -67,12 +69,12 @@
 				<div class="hight-code">
 					<pre class="htmlCode"> &lt;script type="text/javascript" src="js/jquery-1.9.1.min.js" &gt;&lt;/script&gt;<br/> &lt;script type="text/javascript" src="js/viewimg.js" &gt;&lt;/script&gt; </pre>
 				</div>
-                 <div class="dashedLine"></div>
+
 				<p class="info-detail">创建一个文件上传控件 一个显示图片的容器</p>
 				<div class="hight-code">
 					<pre class="htmlCode">&lt;input type="file" id="myfile" /&gt;<br/>&lt;div id="localImag"&gt;&lt;/div&gt;</pre>
 				</div>
-                <div class="dashedLine"></div>
+
 				<p class="info-detail">设置容器css样式</p>
 				<div class="hight-code">
 					<pre class="styles">#localImag {
@@ -82,7 +84,7 @@
 	*overflow: hidden;  /** IE6 必须 **/
 }</pre></div>
 
-                <div class="dashedLine"></div>
+
 				<p class="info-detail">设置显示图片的参数</p>
 				<div class="hight-code">
 					<pre class="js">$(function() {
@@ -93,7 +95,7 @@
 			errorDiv : $("#error")			//错误显示位置
 		});
 	});</pre></div>
-				<p class="tips">sizingMethod : scale|img<br>scale : 按照图片比例适应外层容器的宽高 <br>img :  显示图片原尺寸 </p>
+				<p class="tips">※sizingMethod : scale|img<br>scale : 按照图片比例适应外层容器的宽高 <br>img :  显示图片原尺寸 </p>
 				
 			</div>
 
@@ -111,35 +113,45 @@
 	<section id="footer-wrap">
 		<footer class="width-960 center">
 			<div class="pad-content">
-			<div class="autor display-inline-block">
-				<h1>在这里找到我</h1>
-				<ul>
-					<li>
-						<label>autor : </label>
-						<span>sherlock221</span>
-					</li>
+			    <div class="autor display-inline-block">
+                    <a class="display-inline-block code-img"></a>
+				    <ul class="display-inline-block footer">
+				     	<li>
+						<label>Author : </label>
+						<span>Sherlock221</span>
+					    </li>
 					
-					<li>
+					    <li>
 						<label>Email : </label>
 						<span>920825209@qq.com</span>
-					</li>
+					    </li>
 					
-					<li>
-						<label>qq : </label>
+					    <li>
+						<label>QQ : </label>
 						<span>920825209</span>
-					</li>
-                    <li>
-                        <span class="code-img"></span>
-                    </li>
-					
-				</ul>
-			</div>
-			<div class="feedback display-inline-block">
-				<h1 class="display-inline-block">给我留言</h1>
-					<input type="text" placeholder="留下您的邮箱吧" name="userEmail"/>
-					<textarea name="userContent"></textarea><br>
-					<input type="button" class="sendMe btnBase"  id="sendMe" value="发送给我"/>
-			</div>
+					    </li>
+                    </ul>
+			   </div>
+
+                <div class="display-inline-block">
+
+                    <div class="display-inline-block bshare-custom icon-medium "><a title="分享到QQ空间" class="bshare-qzone"></a>
+                        <a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a>
+                        <a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a>
+                        <a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+                        <span class="BSHARE_COUNT bshare-share-count">0</span>
+                    </div>
+
+                <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+                <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+
+                    <div class="feedback display-inline-block">
+                        <a style="text-decoration:none;" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=rZSfnZWfmJ_dlO3c3IPOwsA" target="_blank">
+                            <img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png">
+                        </a>
+                     </div>
+
+                 </div>
 			</div>
 		</footer>
 	</section>

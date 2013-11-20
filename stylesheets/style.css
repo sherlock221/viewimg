@@ -67,10 +67,23 @@ pre code{
 	overflow: hidden;
 	width: 100%;
 	position: relative;
+    margin-top: 20px;
 	
 }
 .share li{
-	margin-bottom: 40px;
+	margin-bottom: 20px;
+    float: left;
+    margin-right: 12px;
+}
+.share li>h3{
+    font-size: 50%;
+    text-align: center;
+    margin-top: 10px;
+}
+.jquery{
+    width: 108px;
+    height: 40px;
+    background-image: url("../img/jquery.png");
 }
 .share .browser-all {
 }
@@ -90,19 +103,19 @@ pre code{
 }
 
 .chrome {
-	background-position: -320px 0;
-}
-
-.safe-360 {
 	background-position: -160px 0;
 }
 
-.speed-360 {
+.safari{
 	background-position: -240px 0;
 }
 
+.speed-360 {
+	background-position: -320px 0;
+}
+
 .download {
-	    background: none repeat scroll 0 0 #000000;
+	background: none repeat scroll 0 0 #000000;
     border: 0 none;
     color: #FFFFFF;
     cursor: pointer;
@@ -112,19 +125,22 @@ pre code{
     position: relative;
     text-align: center;
     width: 100%;
+    text-decoration: none;
+    margin-bottom: 40px;
 }
 .download:hover{
-	background:#333333;
+	background:#191a1d;
 }
 .try{
-	background: #F0F0F0;
-	border: 3px dashed #D7D7D7;
-	height: 500px;
-	margin-bottom: 40px;
-	cursor: pointer;
-	position: relative;
-	width: 800px;
+    background: none repeat scroll 0 0 #F0F0F0;
+    border: 3px dashed #C9C9C9;
+    color: #C9C9C9;
+    cursor: pointer;
+    height: 500px;
+    margin-bottom: 40px;
     overflow: hidden;
+    position: relative;
+    width: 800px;
 }
 
 .try:hover{
@@ -173,17 +189,20 @@ footer {
 }
 .info-detail{
 	margin-bottom: 25px;
-	color: #120E0E;
+    margin-top: 25px;
+	color: #545454;
+}
+.info h1{
+    font-size: 180%;
 }
 .hight-code{
 
 }
 .tips{
-	background: #000000;
-	color: white;
-	font-size: 100%;
-	padding: 20px;
-	margin : 30px 0;
+    color: #545454;
+    font-size: 100%;
+    margin: 5px 0 50px;
+    padding: 20px;
 }
 
 #content {
@@ -196,6 +215,7 @@ footer {
 }
 .feedback{
 	width: 395px;
+    margin-top: 10px;
 }
 .feedback h1{
 	font-size: 200%;
@@ -238,13 +258,18 @@ footer {
 	*overflow: hidden; /** IE6 必须 **/
 }
 .code-img{
-    width: 140px;
-    height: 140px;
-    background-image: url("../img/20120113103021-320064891.png");
-    display: block;
-    margin-top: 10px;
+    width: 80px;
+    height: 80px;
+    background-image: url("../img/jab-weixin.png");
 }
 .dashedLine{
     border-bottom: 3px dashed #d7d7d7;
     margin-bottom: 30px;
+}
+.footer{
+    margin-left: 20px;
+    vertical-align: bottom;
+}
+.footer label{
+    font-weight: bold;
 }
