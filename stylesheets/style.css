@@ -11,6 +11,14 @@ html {
 	font-family: "微软雅黑";
 }
 
+table{
+    border-collapse: collapse;
+    border: 1px solid #c7c7c7;
+}
+table td{
+    padding: 15px;
+}
+
 h1,h2,h3 {
 	margin: 0;
 	padding: 0;
@@ -75,7 +83,7 @@ pre code{
     float: left;
     margin-right: 12px;
 }
-.share li>h3{
+.share li h3{
     font-size: 50%;
     text-align: center;
     margin-top: 10px;
@@ -199,9 +207,10 @@ footer {
 
 }
 .tips{
-    color: #545454;
+    background: #000000;
+    color: #ffffff;
     font-size: 100%;
-    margin: 5px 0 50px;
+    margin: 30px 0;
     padding: 20px;
 }
 
@@ -250,6 +259,10 @@ footer {
     cursor: pointer;
     filter:alpha(opacity=0);
 
+}
+.param_tab{
+    margin-bottom: 50px;
+    color: #545454;
 }
 #my_img {
     position: relative;

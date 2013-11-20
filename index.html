@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="viewimg.js(图片预览上传插件) 是一款基于jquery开发的插件,它能够实现 本地预览图片 不需要服务器端支持,并且支持各大浏览器 ie6 ie8 ie9 firefox chrome....."/>
+<meta name="description" content="viewimg.1.0.js(图片预览上传插件) 是一款基于jquery开发的插件,它能够实现 本地预览图片 不需要服务器端支持,并且支持各大浏览器 ie6 ie8 ie9 firefox chrome....."/>
 <meta name="keywords" content="图片预览,本地上传,图片上传,上传预览,预览图片,imgview,viewimg,预览本地" />
 <meta name="author" content="sherlock221" />
 <meta name="copyright" content= "sherlock221 Copyright (c) 2013" />
@@ -28,7 +28,7 @@
 <!-- 语法高亮 -->
 <script type="text/javascript" src="javascripts/jquery.snippet.min.zh-cn.js"></script>
 <!-- 本地预览 js -->
-<script type="text/javascript" src="javascripts/viewimg.js"></script>
+<script type="text/javascript" src="javascripts/viewimg.1.0.min.js"></script>
 
 
 </head>
@@ -47,10 +47,7 @@
                     <li>   <a class="display-inline-block browser-all speed-360"></a><h3>360极速</h3> </li>
                     <li style=" margin-left: 15px;margin-top: 35px;">   <h3>supported by</h3> <a class="display-inline-block jquery"></a> </li>
                 </ul>
-
             </div>
-
-
 
 			<h1 class="try-title">试一试</h1>
 			<div class="try" id="try">
@@ -65,9 +62,9 @@
 		<div class="pad-content">
 			<div class="info">
 				<h1 class="info-title">快速上手</h1>
-				<p class="info-detail">导入 jquery1.9.js 和 viewimg.js</p>
+				<p class="info-detail">导入 jquery1.9.js 和 viewimg.1.0.js</p>
 				<div class="hight-code">
-					<pre class="htmlCode"> &lt;script type="text/javascript" src="js/jquery-1.9.1.min.js" &gt;&lt;/script&gt;<br/> &lt;script type="text/javascript" src="js/viewimg.js" &gt;&lt;/script&gt; </pre>
+					<pre class="htmlCode"> &lt;script type="text/javascript" src="js/jquery-1.9.1.min.js" &gt;&lt;/script&gt;<br/> &lt;script type="text/javascript" src="js/viewimg.1.0.js" &gt;&lt;/script&gt; </pre>
 				</div>
 
 				<p class="info-detail">创建一个文件上传控件 一个显示图片的容器</p>
@@ -99,6 +96,81 @@
 				
 			</div>
 
+            <div class="param_result">
+
+            <h1 class="info-title">常用参数</h1>
+            <p class="info-detail">所有viewimg可配参数</p>
+
+            <table class="param_tab" border="1"  BORDERCOLOR="#000000">
+                <tr>
+                    <td class="param_tab_name">参数名称</td>
+                    <td class="param_tab_default">默认值</td>
+                    <td class="param_tab_txt">说明</td>
+                    <td class="param_tab_example">示例</td>
+                </tr>
+
+                <tr>
+                    <td class="param_tab_name">targetDiv</td>
+                    <td class="param_tab_default">无</td>
+                    <td class="param_tab_txt">显示图片的容器(必选)</td>
+                    <td class="param_tab_example">
+                        targetDiv : $("#my_img")
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="param_tab_name">error</td>
+                    <td class="param_tab_default">alert显示</td>
+                    <td class="param_tab_txt" style="text-align: left">
+                        错误显示方式<br/>
+                        1.传递$("xxx")对象,错误显示在$("xxx")中<br/>
+                        2.传递function对象,则为错误回调函数<br/>
+                        3.不传,使用alert弹出</td>
+                    <td class="param_tab_example">
+
+                        error : $("#error")
+                          <br/>
+                        error : function(msg){}
+                        <br/>
+                        error : ""
+                        <br/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="param_tab_name">allowTypes</td>
+                    <td class="param_tab_default">[ ".jpg", ".png", ".bmp", ".gif", ".jpeg" ]</td>
+                    <td class="param_tab_txt" style="text-align: left">
+                        允许上传的图片格式
+                    <td class="param_tab_example">
+                    allowTypes : [ ".png" ]
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="param_tab_name">sizingMethod</td>
+                    <td class="param_tab_default">scale</td>
+                    <td class="param_tab_txt" style="text-align: left">
+                        图片显示方式<br/>
+                        img : 全尺寸显示<br/>
+                        scale : 适应外层容器<br/>
+                    <td class="param_tab_example">
+                    sizingMethod : "scale"
+                    </td>
+                </tr>
+                <tr>
+                    <td class="param_tab_name">ie_delay</td>
+                    <td class="param_tab_default">2000</td>
+                    <td class="param_tab_txt" style="text-align: left">
+                        针对IE 789 的问题 图片过大的 需要延迟执行
+                    <td class="param_tab_example">
+                    ie_delay : 2000
+                    </td>
+                </tr>
+
+
+            </table>
+            </div>
 
 		</div>
 		
@@ -116,22 +188,25 @@
 			    <div class="autor display-inline-block">
                     <a class="display-inline-block code-img"></a>
 				    <ul class="display-inline-block footer">
-				     	<li>
-						<label>Author : </label>
-						<span>Sherlock221</span>
-					    </li>
+                            <li>
+                            <label>Author : </label>
+                            <span>Sherlock221</span>
+                            </li>
 					
-					    <li>
-						<label>Email : </label>
-						<span>920825209@qq.com</span>
-					    </li>
+                            <li>
+                            <label>Email : </label>
+                            <span>920825209@qq.com</span>
+                            </li>
 					
-					    <li>
-						<label>QQ : </label>
-						<span>920825209</span>
-					    </li>
-                    </ul>
-			   </div>
+                            <li>
+                            <label>QQ : </label>
+                            <span>920825209</span>
+                            </li>
+                       <li>
+                        <span class="code-img"></span>
+                      </li>
+				</ul>
+			</div>
 
                 <div class="display-inline-block">
 
