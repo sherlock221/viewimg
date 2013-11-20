@@ -1,19 +1,8 @@
 $(document).ready(function() {
 	
-
 $("pre.htmlCode").snippet("html",{style:"whitengrey"});
-    // Finds <pre> elements with the class "htmlCode"
-    // and snippet highlights the HTML code within.
 $("pre.styles").snippet("css",{style:"whitengrey"});
-    // Finds <pre> elements with the class "styles"
-    // and snippet highlights the CSS code within
-    // using the "greenlcd" styling.
 $("pre.js").snippet("javascript",{style:"rand01"});
-    // Finds <pre> elements with the class "js"
-    // and snippet highlights the JAVASCRIPT code within
-    // using a random style from the selection of 39
-    // with a transparent background
-
 
 
 	var file = $("#myfile");
@@ -24,7 +13,10 @@ $("pre.js").snippet("javascript",{style:"rand01"});
 		sizingMethod : "scale",
 		errorDiv : $("#error")
 	});
-	
+
+    $("#try").click(function(){
+        file.change();
+    });
 	
 	$("#sendMe").click(function(){
 		

@@ -124,6 +124,7 @@ pre code{
 	cursor: pointer;
 	position: relative;
 	width: 800px;
+    overflow: hidden;
 }
 
 .try:hover{
@@ -219,14 +220,16 @@ footer {
 	font-size: 160%;
 }
 .fileBtn{
-	position: relative;
+	position: absolute;
 	z-index: 3;
 	width: 100%;
 	height: 100%;
 	background: none;
-	filter:alpha(opacity=0);
+    font-size: 1000%;
     opacity:0;
     cursor: pointer;
+    filter:alpha(opacity=0);
+
 }
 #localImag {
 	width: 800px;
