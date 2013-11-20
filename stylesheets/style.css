@@ -231,14 +231,11 @@ footer {
     filter:alpha(opacity=0);
 
 }
-#localImag {
+#my_img {
+    position: relative;
 	width: 800px;
 	height: 500px;
 	*overflow: hidden; /** IE6 必须 **/
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 2;
 }
 .code-img{
     width: 140px;

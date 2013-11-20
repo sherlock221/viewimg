@@ -159,7 +159,7 @@
 				} else if (browserType == CONSTANT.FILTER) {
 					var $container = options.targetDiv;
 					// 获得图片原始尺寸
-					$container.append($("<img id='viewimg_size'/>"));
+					$container.append('<img id="viewimg_size"/>');
 					var $imgAuto = $("#viewimg_size");
 					var imgAuto = $imgAuto[0];
 					imgAuto.style.display = "none";
@@ -170,8 +170,8 @@
 					setTimeout(function() {
 						var width = $imgAuto.width();
 						var height = $imgAuto.height();
-						// console.log(width);
-						// console.log(height);
+						 console.log(width);
+						 console.log(height);
 						privateFn.imgZoom($imgAuto, CONSTANT.FILTER, img);
 					}, options.ie_delay);
 

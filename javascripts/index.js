@@ -7,17 +7,12 @@ $("pre.js").snippet("javascript",{style:"rand01"});
 
 	var file = $("#myfile");
 
-	
 	file.viewimg({
-		targetDiv : $("#localImag"),
+		targetDiv : $("#my_img"),
 		sizingMethod : "scale",
 		errorDiv : $("#error")
 	});
 
-    $("#try").click(function(){
-        file.change();
-    });
-	
 	$("#sendMe").click(function(){
 		
 		var userEmail = $.trim($("[name='userEmail']").val());
